@@ -67,12 +67,13 @@ $container-width: 1400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
+  background-color: #fff;
   font-size: 24px;
   .bg-container {
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 9;
   }
 }
 </style>
