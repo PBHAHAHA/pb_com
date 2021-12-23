@@ -1,11 +1,11 @@
 <template>
   <div class="header-container">
     <header>
-      <h1>纸人特工</h1>
+      <h1>Bloooooo</h1>
       <nav>
-        <span>首页</span>
+        <!-- <span>首页</span>
         <span>文章</span>
-        <span>关于</span>
+        <span>关于</span> -->
       </nav>
       <div class="com-handle-container">切换主题</div>
     </header>
@@ -15,7 +15,8 @@
       <CanvasDom />
     </div>
 
-    <h2>好好学习、天天向上</h2>
+    <h2></h2>
+    <!-- Merry Christmas -->
   </div>
 </template>
 
@@ -30,11 +31,11 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
-$container-width: 1400px;
+$container-width: 1260px;
 .header-container {
   position: fixed;
   top: 0;
-  z-index: 9;
+  z-index: 10;
   width: 100%;
   height: 60px;
   line-height: 60px;
