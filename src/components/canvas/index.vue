@@ -1,11 +1,6 @@
 <template>
   <div id="container">
-    <canvas
-      id="canvasDom"
-      type="2d"
-      ref="canvasDom"
-      class="canvas-box"
-    ></canvas>
+    <canvas id="canvasDom" type="2d" ref="canvasDom" class="canvas-box"></canvas>
   </div>
 </template>
 
@@ -39,9 +34,9 @@ const init = function () {
   ballArr = [];
   mouse = { x: -100, y: -100 };
   const colorArr = ["#C11522", "#B5B5D6", "#DBC78A", "#F08805", "#D64E30"];
-  window.addEventListener("mousemove", function (event) {
+  canvasDom.value!.addEventListener("mousemove", function (event) {
     mouse.x = event.clientX;
-    mouse.y = event.clientY;
+    mouse.y = event.clientY + document.documentElement.scrollTop;
     originX = event.clientX;
     originY = event.clientY;
     console.log(mouse);
@@ -58,7 +53,7 @@ const init = function () {
     canvasDom.value!.width = window.innerWidth;
     canvasDom.value!.height = window.innerHeight;
   });
-  for (let i = 0; i < 300; i++) {
+  for (let i = 0; i < 400; i++) {
     let radius = Math.random() * 4 + 3;
     let x = Math.random() * (canvasDom.value!.width - 2 * radius) + radius;
     let y = Math.random() * (canvasDom.value!.height - 2 * radius) + radius;

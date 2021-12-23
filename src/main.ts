@@ -8,11 +8,12 @@ import {
   // create naive ui
   create,
   // component
-  NButton
+  NButton,
+  NIcon
 } from 'naive-ui'
 
 const naive = create({
-  components: [NButton]
+  components: [NButton, NIcon]
 })
 
 const app = createApp(App)
