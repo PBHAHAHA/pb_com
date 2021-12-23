@@ -53,7 +53,7 @@ const init = function () {
       mouse.x = -100;
       mouse.y = -100;
     }
-  }, 3000);
+  }, 2000);
   window.addEventListener("resize", function (event) {
     canvasDom.value!.width = window.innerWidth;
     canvasDom.value!.height = window.innerHeight;

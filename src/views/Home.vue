@@ -3,11 +3,14 @@
     <header>
       <h1>Bloooooo</h1>
       <nav>
-        <!-- <span>首页</span>
+        <span>首页</span>
         <span>文章</span>
-        <span>关于</span> -->
+        <span>关于</span>
       </nav>
-      <div class="com-handle-container">切换主题</div>
+      <div class="com-handle-container">
+        <span class="item">切换主题</span>
+        <span class="item">切换动画</span>
+      </div>
     </header>
   </div>
   <div class="pageone-container">
@@ -15,9 +18,26 @@
       <CanvasDom />
     </div>
 
-    <h2></h2>
-    <!-- Merry Christmas -->
+    <p>Merry Christmas</p>
   </div>
+  <article>
+    <h2 class="t-c">works</h2>
+    <section v-for="item in 3" :key="item">
+      <div>
+        <h3>pb-ui</h3>
+        <p></p>
+      </div>
+      <p>github</p>
+    </section>
+    <h2 class="t-c">resume</h2>
+    <section v-for="item in 3" :key="item">
+      <div>
+        <h3>pb-ui</h3>
+        <p></p>
+      </div>
+      <p>github</p>
+    </section>
+  </article>
 </template>
 
 <script lang="ts">
@@ -58,6 +78,9 @@ $container-width: 1260px;
     }
     .com-handle-container {
       float: right;
+      .item {
+        margin-left: 10px;
+      }
     }
   }
 }
@@ -75,6 +98,24 @@ $container-width: 1260px;
     height: 100%;
     position: absolute;
     z-index: 9;
+  }
+}
+article {
+  width: $container-width;
+  margin: 0 auto;
+  padding: 20px 0;
+  h2 {
+    margin-bottom: 20px;
+  }
+  section {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    &:hover {
+      box-shadow: 0 0 10px #ccc;
+    }
+    // box-shadow: 0 0 10px #f0f0f0;
   }
 }
 </style>
