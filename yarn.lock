@@ -1254,6 +1254,11 @@
   dependencies:
     "@types/yargs-parser" "*"
 
+"@vicons/ionicons5@^0.11.0":
+  "integrity" "sha1-VBhb+lcqCd9wCU2xlU8ov78TY+0="
+  "resolved" "https://registry.nlark.com/@vicons/ionicons5/download/@vicons/ionicons5-0.11.0.tgz"
+  "version" "0.11.0"
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   "integrity" "sha1-MWJKelBfsU2h1YAjclpMXycOaoE="
   "resolved" "https://registry.nlark.com/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.2.1.tgz"
@@ -2064,6 +2069,13 @@
   "integrity" "sha1-1h9G2DslGSUOJ4Ta9bCUeai0HFk="
   "resolved" "https://registry.npm.taobao.org/aws4/download/aws4-1.11.0.tgz?cache=0&sync_timestamp=1604101244098&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faws4%2Fdownload%2Faws4-1.11.0.tgz"
   "version" "1.11.0"
+
+"axios@^0.24.0":
+  "integrity" "sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA=="
+  "resolved" "https://registry.npmjs.org/axios/-/axios-0.24.0.tgz"
+  "version" "0.24.0"
+  dependencies:
+    "follow-redirects" "^1.14.4"
 
 "babel-code-frame@^6.22.0":
   "integrity" "sha1-Y/1D99weO7fONZR9uP42mj9Yx0s="
@@ -3987,6 +3999,11 @@
     "loader-utils" "^1.2.3"
     "schema-utils" "^2.5.0"
 
+"file-uri-to-path@1.0.0":
+  "integrity" "sha1-VTp7hEb/b2hDWcRF8eN6BdrMM90="
+  "resolved" "https://registry.nlark.com/file-uri-to-path/download/file-uri-to-path-1.0.0.tgz"
+  "version" "1.0.0"
+
 "filesize@^3.6.1":
   "integrity" "sha1-CQuz7gG2+AGoqL6Z0xcQs0Irsxc="
   "resolved" "https://registry.npmmirror.com/filesize/download/filesize-3.6.1.tgz?cache=0&sync_timestamp=1635763993879&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Ffilesize%2Fdownload%2Ffilesize-3.6.1.tgz"
@@ -4072,7 +4089,7 @@
     "inherits" "^2.0.3"
     "readable-stream" "^2.3.6"
 
-"follow-redirects@^1.0.0":
+"follow-redirects@^1.0.0", "follow-redirects@^1.14.4":
   "integrity" "sha512-fhUl5EwSJbbl8AR+uYL2KQDxLkdSjZGR36xy46AO7cOMTrCMON6Sa28FmAnC2tRTDbd/Uuzz3aJBv7EBN7JH8A=="
   "resolved" "https://registry.npmmirror.com/follow-redirects/download/follow-redirects-1.14.6.tgz"
   "version" "1.14.6"
