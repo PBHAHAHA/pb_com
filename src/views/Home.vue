@@ -1,7 +1,7 @@
 <template>
   <div class="header-container">
     <header>
-      <h1>Bloooooo</h1>
+      <h1>{{ homeData.name }}</h1>
       <nav>
         <span>作品</span>
         <span>文章</span>
@@ -18,7 +18,7 @@
       <CanvasDom />
     </div>
 
-    <p class="text">好好学习、天天向上</p>
+    <p class="text">{{ homeData.text }}</p>
   </div>
   <article>
     <h2>我的作品</h2>
@@ -65,28 +65,10 @@
     </section>
     <h2>文章</h2>
     <section class="blog-container">
-      <div class="blog-item">
+      <div class="blog-item" v-for="item in articleList" :key="item.title">
         <div class="item">
-          <h3>Vue3+ts构建个人博客</h3>
-          <p>由于之前记录学习都是用的有道云笔记加之最近想学习Vue3+ts</p>
-        </div>
-        <p class="item-img">
-          <img src="@/assets/images/no-data2.png" />
-        </p>
-      </div>
-      <div class="blog-item">
-        <div class="item">
-          <h3>Vue3+ts构建个人博客</h3>
-          <p>由于之前记录学习都是用的有道云笔记加之最近想学习Vue3+ts</p>
-        </div>
-        <p class="item-img">
-          <img src="@/assets/images/no-data2.png" />
-        </p>
-      </div>
-      <div class="blog-item">
-        <div class="item">
-          <h3>Vue3+ts构建个人博客</h3>
-          <p>由于之前记录学习都是用的有道云笔记加之最近想学习Vue3+ts</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.info }}</p>
         </div>
         <p class="item-img">
           <img src="@/assets/images/no-data2.png" />
@@ -128,13 +110,34 @@
 </template>
 
 <script lang="ts">
-import { LogoGithub } from '@vicons/ionicons5'
+import { LogoGithub } from "@vicons/ionicons5";
 import CanvasDom from "@/components/canvas/index.vue";
-import { defineComponent } from "vue";
+import { getHomeInfo, getArticalList } from "@/api/test";
+import { defineComponent, onMounted, ref } from "vue";
 export default defineComponent({
   name: "Home",
   components: {
-    CanvasDom, LogoGithub
+    CanvasDom,
+    LogoGithub,
+  },
+  setup() {
+    let homeData = ref({});
+    onMounted(async () => {
+      console.log("onMounted-----------------");
+      const data = await getHomeInfo();
+      homeData.value = data;
+    });
+
+    let articleList = ref({});
+    onMounted(async () => {
+      console.log("onMounted-----------------2");
+      const data = await getArticalList();
+      articleList.value = data;
+    });
+    return {
+      homeData,
+      articleList,
+    };
   },
 });
 </script>

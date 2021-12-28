@@ -9,11 +9,15 @@ import {
   create,
   // component
   NButton,
-  NIcon
+  NIcon,
+  NForm,
+  NFormItem,
+  NInput,
+  NSelect
 } from 'naive-ui'
 
 const naive = create({
-  components: [NButton, NIcon]
+  components: [NButton, NIcon, NForm, NFormItem, NInput, NSelect]
 })
 
 const app = createApp(App)

@@ -8,9 +8,13 @@
   },
   "dependencies": {
     "@vicons/ionicons5": "^0.11.0",
+    "@wangeditor/editor": "^0.13.4",
+    "@wangeditor/editor-for-vue": "^5.1.8-5",
     "axios": "^0.24.0",
     "core-js": "^3.6.5",
+    "lodash.clonedeep": "^4.5.0",
     "normalize.css": "^8.0.1",
+    "qs": "^6.10.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
