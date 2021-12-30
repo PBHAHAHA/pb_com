@@ -74,7 +74,7 @@
           <img src="@/assets/images/no-data2.png" />
         </p>
       </div>
-      <div class="blog-item">
+      <div class="blog-item" @click="linkToArticle">
         <p class="t-c more">More...</p>
       </div>
     </section>
@@ -114,6 +114,7 @@ import { LogoGithub } from "@vicons/ionicons5";
 import CanvasDom from "@/components/canvas/index.vue";
 import { getHomeInfo, getArticalList } from "@/api/test";
 import { defineComponent, onMounted, ref } from "vue";
+import { useRoute, useRouter } from 'vue-router'
 export default defineComponent({
   name: "Home",
   components: {
@@ -134,9 +135,16 @@ export default defineComponent({
       const data = await getArticalList();
       articleList.value = data;
     });
+    const router = useRouter()
+    const linkToArticle = () => {
+      router.push({
+        name: "article"
+      })
+    }
     return {
       homeData,
       articleList,
+      linkToArticle
     };
   },
 });
