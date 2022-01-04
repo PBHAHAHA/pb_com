@@ -1,24 +1,11 @@
 <template>
-  <div class="header-container">
-    <header>
-      <h1>{{ homeData.name }}</h1>
-      <nav>
-        <span>作品</span>
-        <span>文章</span>
-        <span>关于</span>
-      </nav>
-      <div class="com-handle-container">
-        <span class="item">切换主题</span>
-        <span class="item">切换动画</span>
-      </div>
-    </header>
-  </div>
+  <Header />
   <div class="pageone-container">
     <div class="bg-container">
       <CanvasDom />
     </div>
 
-    <p class="text">{{ homeData.text }}</p>
+    <p class="text">{{ homeData.text || '好好学习、天天向上' }}</p>
   </div>
   <article>
     <h2>我的作品</h2>
@@ -115,11 +102,13 @@ import CanvasDom from "@/components/canvas/index.vue";
 import { getHomeInfo, getArticalList } from "@/api/test";
 import { defineComponent, onMounted, ref } from "vue";
 import { useRoute, useRouter } from 'vue-router'
+import Header from '@/components/header/index.vue'
 export default defineComponent({
   name: "Home",
   components: {
     CanvasDom,
     LogoGithub,
+    Header
   },
   setup() {
     let homeData = ref({});
@@ -151,38 +140,6 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 $container-width: 1260px;
-.header-container {
-  position: fixed;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px #ccc;
-  header {
-    overflow: hidden;
-    width: $container-width;
-    margin: 0 auto;
-    h1 {
-      float: left;
-    }
-    nav {
-      float: left;
-      margin-left: 60px;
-      span {
-        font-size: 16px;
-        margin-right: 20px;
-      }
-    }
-    .com-handle-container {
-      float: right;
-      .item {
-        margin-left: 10px;
-      }
-    }
-  }
-}
 
 .pageone-container {
   position: relative;

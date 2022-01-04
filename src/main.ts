@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import installIcons from '@/icons'
 // import 'normalize.css/normalize.css'
 import './styles/index.scss'
 import {
@@ -21,5 +22,6 @@ const naive = create({
 })
 
 const app = createApp(App)
+installIcons(app)
 app.use(naive)
 app.use(store).use(router).mount('#app')
